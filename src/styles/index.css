@@ -1,12 +1,94 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+#app {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #f4f4f9; 
+  }
+  
+  .todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #005f73; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    width: 400px;
+    min-height: 400px;
+    padding: 20px;
+    background: white;
+    transition: transform 0.2s ease; 
+  }
+  
+  .todo-container:hover {
+    transform: scale(1.05); 
+  }
+  
+  /* Input Styling */
+  .todo-input {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 2px solid #00b4d8; 
+    outline: none;
+    transition: all 0.3s ease;
+    width: calc(100% - 30px); 
+  }
+  
+  .todo-input:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 8px #00b4d8; 
+  }
+  
+  /* Todo List Styling */
+  .todo-ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    overflow-y: auto; 
+    max-height: 300px; 
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  .todo-item:hover {
+    background-color: #e0f4f1; 
+  }
+  
+  /* Checkbox and Label Styling */
+  .todo-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .todo-label {
+    flex-grow: 1;
+    cursor: pointer;
+  }
+  
+  /* Button Styling */
+  .todo-delete-item, .todo-undo-button, .todo-clearall-button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: transparent;
+    border: none;
+    color: #0077b6;
+    transition: color 0.2s ease;
+  }
+  
+  .todo-delete-item:hover, .todo-undo-button:hover, .todo-clearall-button:hover {
+    color: #023e8a; 
+  }
+  
+  .todo-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
